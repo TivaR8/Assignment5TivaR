@@ -165,6 +165,7 @@ namespace Assignment5TivaR
             btnPass.Hide();
             btnHit.Hide();
             this.btnContinue.Location = new Point(383, 321);
+           
 
             // Change status to tell user to press continue
             lblStatus.Text = ("Press continue for dealers turn");
