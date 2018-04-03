@@ -177,7 +177,41 @@ namespace Assignment5TivaR
             int currentLocation = 0;
 
             //To Display the Computer's cards
-           // while (currentLocation< finalLocation)
+            // while (currentLocation< finalLocation)
+
+            // Finally Just to find winner
+            if (comTotal == playTotal)
+            {
+                lblStatus.Text = ("It's a tie.");
+            }
+            else if (comTotal == BLACKJACK)
+            {
+                lblStatus.Text = ("Computer wins with a blackjack");
+            }
+            else if (playTotal == BLACKJACK)
+            {
+                lblStatus.Text = (playerName + " wins with a blackjack!");
+            }
+            else if (playTotal >21 && comTotal >21)
+            {
+                lblStatus.Text = ("It's a tie.");
+            }
+            else if (playTotal >21)
+            {
+                lblStatus.Text = ("Computer wins");
+            }
+            else if (comTotal > 21 && playTotal <= 21)
+            {
+                lblStatus.Text = (playerName + " wins!");
+            }
+            else if (playTotal > comTotal)
+            {
+                lblStatus.Text = (playerName + " wins!");
+            }
+            else
+            {
+                lblStatus.Text = ("Computer wins");
+            }
 
         }
     }
