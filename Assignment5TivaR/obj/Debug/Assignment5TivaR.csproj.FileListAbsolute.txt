@@ -8,3 +8,12 @@ C:\Users\Tiva Rait\Desktop\School work\Programming\Grade 11\Assignments\Assignme
 C:\Users\Tiva Rait\Desktop\School work\Programming\Grade 11\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.csproj.CoreCompileInputs.cache
 C:\Users\Tiva Rait\Desktop\School work\Programming\Grade 11\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.exe
 C:\Users\Tiva Rait\Desktop\School work\Programming\Grade 11\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.pdb
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\bin\Debug\Assignment5TivaR.exe.config
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\bin\Debug\Assignment5TivaR.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\bin\Debug\Assignment5TivaR.pdb
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.csprojResolveAssemblyReference.cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.frmAssignment5.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.Properties.Resources.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.csproj.GenerateResource.Cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment5TivaR\Assignment5TivaR\obj\Debug\Assignment5TivaR.pdb
