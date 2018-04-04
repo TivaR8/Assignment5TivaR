@@ -120,6 +120,9 @@
   <metadata name="mnuMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 3</value>
   </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>This is a simplified version of the game 21, also known as Blackjack. In this game you will be given two cards ranging from 1 to 10. The object of the game is to get the numbers on your cards to add up to 21 without going over. Once you are given your two cards you must decide if you are happy with the cards you are given or if you would like to risk it all and take another card. To win all you have to do is have your cards add up to a higher number than the computers cards (again without going over 21). </value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

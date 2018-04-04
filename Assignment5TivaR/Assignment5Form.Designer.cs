@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssignment5));
             this.grbCom = new System.Windows.Forms.GroupBox();
             this.lblComTotal = new System.Windows.Forms.Label();
             this.grbComCard3 = new System.Windows.Forms.GroupBox();
@@ -52,11 +53,20 @@
             this.mniFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mniNewGame = new System.Windows.Forms.ToolStripMenuItem();
             this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniInstructions = new System.Windows.Forms.ToolStripMenuItem();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnPlay = new System.Windows.Forms.Button();
-            this.btnPass = new System.Windows.Forms.Button();
-            this.btnHit = new System.Windows.Forms.Button();
             this.btnContinue = new System.Windows.Forms.Button();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.grbPass = new System.Windows.Forms.GroupBox();
+            this.picX = new System.Windows.Forms.PictureBox();
+            this.grbHit = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHit = new System.Windows.Forms.Label();
+            this.grbInstructions = new System.Windows.Forms.GroupBox();
+            this.btnCloseInstructions = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.grbCom.SuspendLayout();
             this.grbComCard3.SuspendLayout();
             this.grbComCard2.SuspendLayout();
@@ -67,6 +77,11 @@
             this.grbPlayCard3.SuspendLayout();
             this.grbPlayCard2.SuspendLayout();
             this.mnuMenu.SuspendLayout();
+            this.grbPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picX)).BeginInit();
+            this.grbHit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grbInstructions.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbCom
@@ -93,6 +108,7 @@
             // 
             // grbComCard3
             // 
+            this.grbComCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.grbComCard3.Controls.Add(this.lbl3ComCard);
             this.grbComCard3.Location = new System.Drawing.Point(184, 86);
             this.grbComCard3.Name = "grbComCard3";
@@ -112,6 +128,7 @@
             // 
             // grbComCard2
             // 
+            this.grbComCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.grbComCard2.Controls.Add(this.lbl2ComCard);
             this.grbComCard2.Location = new System.Drawing.Point(95, 86);
             this.grbComCard2.Name = "grbComCard2";
@@ -131,6 +148,7 @@
             // 
             // grbComCard1
             // 
+            this.grbComCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.grbComCard1.Controls.Add(this.lbl1ComCard);
             this.grbComCard1.Location = new System.Drawing.Point(6, 86);
             this.grbComCard1.Name = "grbComCard1";
@@ -200,6 +218,7 @@
             // 
             // grbPlayCard1
             // 
+            this.grbPlayCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grbPlayCard1.Controls.Add(this.lbl1PlayCard);
             this.grbPlayCard1.Location = new System.Drawing.Point(6, 86);
             this.grbPlayCard1.Name = "grbPlayCard1";
@@ -228,6 +247,7 @@
             // 
             // grbPlayCard3
             // 
+            this.grbPlayCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grbPlayCard3.Controls.Add(this.lbl3PlayCard);
             this.grbPlayCard3.Location = new System.Drawing.Point(184, 86);
             this.grbPlayCard3.Name = "grbPlayCard3";
@@ -247,6 +267,7 @@
             // 
             // grbPlayCard2
             // 
+            this.grbPlayCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grbPlayCard2.Controls.Add(this.lbl2PlayCard);
             this.grbPlayCard2.Location = new System.Drawing.Point(95, 86);
             this.grbPlayCard2.Name = "grbPlayCard2";
@@ -267,7 +288,8 @@
             // mnuMenu
             // 
             this.mnuMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mniFile});
+            this.mniFile,
+            this.mniInstructions});
             this.mnuMenu.Location = new System.Drawing.Point(0, 0);
             this.mnuMenu.Name = "mnuMenu";
             this.mnuMenu.Size = new System.Drawing.Size(523, 24);
@@ -288,6 +310,7 @@
             this.mniNewGame.Name = "mniNewGame";
             this.mniNewGame.Size = new System.Drawing.Size(132, 22);
             this.mniNewGame.Text = "New Game";
+            this.mniNewGame.Click += new System.EventHandler(this.mniNewGame_Click);
             // 
             // mniExit
             // 
@@ -296,11 +319,18 @@
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.mniExit_Click);
             // 
+            // mniInstructions
+            // 
+            this.mniInstructions.Name = "mniInstructions";
+            this.mniInstructions.Size = new System.Drawing.Size(81, 20);
+            this.mniInstructions.Text = "Instructions";
+            this.mniInstructions.Click += new System.EventHandler(this.mniInstructions_Click);
+            // 
             // lblStatus
             // 
             this.lblStatus.Location = new System.Drawing.Point(331, 273);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(180, 18);
+            this.lblStatus.Size = new System.Drawing.Size(180, 45);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Enter your Name.";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -315,29 +345,9 @@
             this.btnPlay.UseVisualStyleBackColor = true;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // btnPass
-            // 
-            this.btnPass.Location = new System.Drawing.Point(383, 350);
-            this.btnPass.Name = "btnPass";
-            this.btnPass.Size = new System.Drawing.Size(75, 23);
-            this.btnPass.TabIndex = 8;
-            this.btnPass.Text = "Pass";
-            this.btnPass.UseVisualStyleBackColor = true;
-            this.btnPass.Click += new System.EventHandler(this.btnPass_Click);
-            // 
-            // btnHit
-            // 
-            this.btnHit.Location = new System.Drawing.Point(383, 379);
-            this.btnHit.Name = "btnHit";
-            this.btnHit.Size = new System.Drawing.Size(75, 23);
-            this.btnHit.TabIndex = 9;
-            this.btnHit.Text = "Hit";
-            this.btnHit.UseVisualStyleBackColor = true;
-            this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
-            // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(383, 409);
+            this.btnContinue.Location = new System.Drawing.Point(383, 350);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(75, 23);
             this.btnContinue.TabIndex = 10;
@@ -345,14 +355,119 @@
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
+            // lblPass
+            // 
+            this.lblPass.AutoSize = true;
+            this.lblPass.Location = new System.Drawing.Point(12, 60);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(30, 13);
+            this.lblPass.TabIndex = 12;
+            this.lblPass.Text = "Pass";
+            // 
+            // grbPass
+            // 
+            this.grbPass.Controls.Add(this.picX);
+            this.grbPass.Controls.Add(this.lblPass);
+            this.grbPass.Location = new System.Drawing.Point(453, 397);
+            this.grbPass.Name = "grbPass";
+            this.grbPass.Size = new System.Drawing.Size(58, 81);
+            this.grbPass.TabIndex = 13;
+            this.grbPass.TabStop = false;
+            // 
+            // picX
+            // 
+            this.picX.Image = global::Assignment5TivaR.Properties.Resources.BlackX;
+            this.picX.Location = new System.Drawing.Point(6, 14);
+            this.picX.Name = "picX";
+            this.picX.Size = new System.Drawing.Size(45, 43);
+            this.picX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picX.TabIndex = 11;
+            this.picX.TabStop = false;
+            this.picX.Click += new System.EventHandler(this.btnPass_Click);
+            // 
+            // grbHit
+            // 
+            this.grbHit.Controls.Add(this.pictureBox1);
+            this.grbHit.Controls.Add(this.lblHit);
+            this.grbHit.Location = new System.Drawing.Point(334, 397);
+            this.grbHit.Name = "grbHit";
+            this.grbHit.Size = new System.Drawing.Size(58, 81);
+            this.grbHit.TabIndex = 14;
+            this.grbHit.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Assignment5TivaR.Properties.Resources.PlusGreen;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnHit_Click);
+            // 
+            // lblHit
+            // 
+            this.lblHit.AutoSize = true;
+            this.lblHit.Location = new System.Drawing.Point(20, 60);
+            this.lblHit.Name = "lblHit";
+            this.lblHit.Size = new System.Drawing.Size(20, 13);
+            this.lblHit.TabIndex = 12;
+            this.lblHit.Text = "Hit";
+            // 
+            // grbInstructions
+            // 
+            this.grbInstructions.Controls.Add(this.label2);
+            this.grbInstructions.Controls.Add(this.label1);
+            this.grbInstructions.Controls.Add(this.btnCloseInstructions);
+            this.grbInstructions.Location = new System.Drawing.Point(0, 27);
+            this.grbInstructions.Name = "grbInstructions";
+            this.grbInstructions.Size = new System.Drawing.Size(523, 490);
+            this.grbInstructions.TabIndex = 15;
+            this.grbInstructions.TabStop = false;
+            this.grbInstructions.Text = "Instructions";
+            // 
+            // btnCloseInstructions
+            // 
+            this.btnCloseInstructions.Location = new System.Drawing.Point(226, 365);
+            this.btnCloseInstructions.Name = "btnCloseInstructions";
+            this.btnCloseInstructions.Size = new System.Drawing.Size(75, 23);
+            this.btnCloseInstructions.TabIndex = 0;
+            this.btnCloseInstructions.Text = "Close";
+            this.btnCloseInstructions.UseVisualStyleBackColor = true;
+            this.btnCloseInstructions.Click += new System.EventHandler(this.btnCloseInstructions_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(435, 204);
+            this.label1.TabIndex = 1;
+            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(42, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(453, 83);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "To start, close this screen and enter your name. If you wish to start a new game " +
+    "at anytime you may click the New Game option under file. Good luck and may the o" +
+    "dds be ever in your favour.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frmAssignment5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 514);
+            this.Controls.Add(this.grbInstructions);
+            this.Controls.Add(this.grbHit);
+            this.Controls.Add(this.grbPass);
             this.Controls.Add(this.btnContinue);
-            this.Controls.Add(this.btnHit);
-            this.Controls.Add(this.btnPass);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.grbPlayer);
@@ -381,6 +496,13 @@
             this.grbPlayCard2.PerformLayout();
             this.mnuMenu.ResumeLayout(false);
             this.mnuMenu.PerformLayout();
+            this.grbPass.ResumeLayout(false);
+            this.grbPass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picX)).EndInit();
+            this.grbHit.ResumeLayout(false);
+            this.grbHit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grbInstructions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,9 +536,18 @@
         private System.Windows.Forms.Label lbl1PlayCard;
         private System.Windows.Forms.Label lbl3PlayCard;
         private System.Windows.Forms.Label lbl2PlayCard;
-        private System.Windows.Forms.Button btnPass;
-        private System.Windows.Forms.Button btnHit;
         private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.ToolStripMenuItem mniInstructions;
+        private System.Windows.Forms.PictureBox picX;
+        private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.GroupBox grbPass;
+        private System.Windows.Forms.GroupBox grbHit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblHit;
+        private System.Windows.Forms.GroupBox grbInstructions;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCloseInstructions;
     }
 }
 
