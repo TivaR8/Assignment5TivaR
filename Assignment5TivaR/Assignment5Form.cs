@@ -27,6 +27,7 @@ namespace Assignment5TivaR
         const int MAX_VALUE = 10;
         const int MIN_VALUE = 1;
         string playerName;
+        bool threeComCards;
         int playTotal, firstPlayCard, secondPlayCard, thirdPlayCard;
         int comTotal, firstComCard, secondComCard, thirdComCard;
         Random randomNumberGenerator = new Random();
@@ -50,6 +51,8 @@ namespace Assignment5TivaR
              firstComCard = 0;
              secondComCard = 0;
              thirdComCard = 0;
+
+            threeComCards = false;
 
             //To Disable all of the group boxes and buttons until name is submitted
             grbCom.Enabled = false;
@@ -106,6 +109,8 @@ namespace Assignment5TivaR
             secondComCard = 0;
             thirdComCard = 0;
 
+            threeComCards = false;
+
             //To Disable all of the group boxes and buttons until name is submitted
             grbCom.Enabled = false;
             grbPlayer.Enabled = false;
@@ -140,7 +145,7 @@ namespace Assignment5TivaR
             this.btnContinue.Location = new Point(383, 350);
             btnContinue.Hide();
 
-            // Test to see if  cards off screen will look like they are "Off the table"
+            // Move cards to be in deck
             this.grbComCard1.Location = new Point(6, 19);
             grbComCard1.Text = ("Deck");
 
@@ -196,6 +201,7 @@ namespace Assignment5TivaR
             {
                 thirdComCard = randomNumberGenerator.Next(MIN_VALUE, MAX_VALUE + 1);
                 Console.WriteLine("New Third Card");
+                threeComCards = true;
 
                 // Change the third card text to show the number
                 lbl3ComCard.Text = Convert.ToString(thirdComCard);
@@ -204,6 +210,8 @@ namespace Assignment5TivaR
             {
                 thirdComCard = 0;
                 Console.WriteLine("No third Card");
+                threeComCards = false;
+                grbComCard3.Hide();
             }
             comTotal = firstComCard + secondComCard + thirdComCard;
 
@@ -266,7 +274,10 @@ namespace Assignment5TivaR
             this.grbComCard1.Location = new Point(6, 86);
             grbComCard1.Text = ("Card 1");
             grbComCard2.Show();
-            grbComCard3.Show();
+            if (threeComCards == true)
+            {
+                grbComCard3.Show();
+            }
 
             //Display computers numbers
             lbl1ComCard.Text = Convert.ToString(firstComCard);
